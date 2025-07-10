@@ -261,7 +261,7 @@ document.addEventListener('DOMContentLoaded', () => {
       validationErrorsContainer.innerHTML =
         '<p class="placeholder-text">Initializing client session...</p>';
 
-      initializationTimeout = setTimeout(() => {
+      initializationTimeout = window.setTimeout(() => {
         validationErrorsContainer.innerHTML = `<p class="error-text">Error: Client initialization timed out.</p>`;
         chatInput.disabled = true;
         sendBtn.disabled = true;
