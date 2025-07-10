@@ -20,13 +20,13 @@ jobs:
           fetch-depth: 0
 
       - name: Setup GitVersion
-        uses: GitTools/actions/setup@v0.10.2
+        uses: GitTools/actions/gitversion/setup@v0.10.2
         with:
-          versionSpec: '5.x'
+          versionSpec: "5.x"
 
       - name: Determine Version
         id: gitversion
-        uses: GitTools/actions/execute@v0.10.2
+        uses: GitTools/actions/gitversion/execute@v0.10.2
 
       - name: Log in to the Container registry
         uses: docker/login-action@v3
